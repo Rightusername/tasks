@@ -1,0 +1,33 @@
+.btnDel{
+    float: right;
+    width: 100px;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-name{
+    flex: 1;
+}
+
+.comments-amount{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.form-add-task{
+    display: flex;
+    align-items: center;
+}
+
+.form-add-task_input{
+    flex:1;
+}
+
+.form-add-task_submit{
+    width:100px;
+    margin-left: 10px;
+}

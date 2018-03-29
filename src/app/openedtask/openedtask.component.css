@@ -1,0 +1,51 @@
+
+
+.form-add-comment{
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-add-comment button{
+    margin-left: 10px;
+}
+
+.form-add-comment_input{
+    flex:1;
+}
+
+
+.comment{
+    display: flex;
+}
+
+.avatar{
+    width: 70px;
+    height: 70px;
+    background: darkorange;
+    margin: 5px;
+}
+
+.comment-content{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.username{
+    font-weight: bold;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 100px);
+}
+
+.form-container{
+    height: 100px;
+}
+
+.comments-container{
+    overflow: scroll;
+    flex: 1;
+    overflow-x:hidden; 
+}

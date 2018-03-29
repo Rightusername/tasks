@@ -1,0 +1,28 @@
+
+<button mat-raised-button routerLink="/">Back</button>
+
+<div class="wrap">
+  <div class="comments-container" id="comments">
+    <mat-card *ngFor="let comment of task.comments" class="comment">
+      <div class="avatar"></div>
+      <div class="comment-content">
+        <div class="username">
+          {{comment.username}}
+        </div>
+        {{comment.text}}
+      </div>
+    </mat-card>
+  </div>
+  <div class="form-container">
+    <form class="form-add-comment">
+      <mat-form-field class="form-add-comment_input">
+        <textarea matInput type="text" name="comment" [(ngModel)]="comment" placeholder="Your comment"></textarea>
+      </mat-form-field>
+      <button mat-raised-button (click)="sendComment()" [disabled]="!comment">Comment</button>
+    </form>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,17 @@
+<form class="form-add-task">
+  <mat-form-field class="form-add-task_input">
+    <input matInput placeholder="Task name" [(ngModel)]="taskName" name="name" >
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addTask()" [disabled]="!taskName" class="form-add-task_submit">Add new</button>
+</form>
+
+<mat-card *ngFor="let task of this.tasksService.tasks" routerLink={{task.id}} class="task" >
+  <span class="task-name">
+    {{task.name}}
+    <mat-chip-list class="comments-amount">
+      <mat-chip color="accent" selected="true" *ngIf="task.comments.length">{{task.comments.length}}</mat-chip>
+    </mat-chip-list>
+  </span>
+  <button mat-button (click)="this.tasksService.delete(task.id)">Delete</button>
+</mat-card>
+
